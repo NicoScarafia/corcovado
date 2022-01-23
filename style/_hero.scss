@@ -1,0 +1,165 @@
+header {
+    position: absolute;
+    top: 2rem; right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 3rem;
+    z-index: 100;
+    text-align: center;
+
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 0 1.1rem;
+            transition: all 0.1s;
+            padding: 0.01rem 0.1rem;
+
+            @include hoverLink($mainOrange, 0.14rem);    
+        }
+    }
+
+    .btn__menu{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all 300ms;
+        display: none;
+    }
+}
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    
+    .brand {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        img {
+            text-align: center;
+            width: 15rem;
+            z-index: 1;
+        }
+    
+        h1 {
+            font-family: 'Alfa Slab One', cursive;
+            text-align: center;
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+            padding: .5rem 3rem;
+            z-index: 1;
+            -webkit-text-stroke: 0.12rem black;
+            text-transform: uppercase;
+            letter-spacing: -0.09rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: 'Alfa Slab One', cursive;
+            -webkit-text-stroke: 0.08rem black;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            font-size: 0.9rem;
+            text-decoration: none;
+            background-color: $mainOrange;
+            color: black;
+            border: 0.1rem solid black;
+            padding: 0.5rem 1.2rem; margin-top: 1.2rem;
+            transition: all 0.3s;
+            
+            &:hover {
+                color: white;
+                background-color: $mainGreen;
+                border: 0.1rem solid white;
+            }
+        }
+    }
+}
+
+.video-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    video {
+        position: absolute;
+     top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    }
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    background-color: #1cb0dd2f;
+    mix-blend-mode: overlay;
+}
+
+
+@media (max-width: 768px) {
+
+    #hero {
+        
+        .brand {
+            
+            img {
+                width: 14rem;
+            }
+
+            h1 {   
+                margin: 1.5rem 0;
+                padding: 1.5rem 2rem;
+                font-size: 2.6rem;
+                line-height: 3rem;
+            }
+
+            p {
+            font-size: 1.6rem;
+            padding: 1rem 2rem;
+            margin-top: -1rem
+            }
+
+            a {
+            font-size: 0.9rem;
+            padding: 0.5rem 1.2rem; 
+            margin: 1.5rem 0;
+            text-decoration: none;
+            color: black;
+            }
+        }
+    }
+}
+
+
+

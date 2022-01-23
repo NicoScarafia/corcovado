@@ -1,0 +1,79 @@
+// Bootrsrap Breakpoints
+
+$mobile: (max-width: 576px);
+$tablet: (min-width: 577px) and (max-width: 992px);
+
+
+// Colors
+$black: #000;
+$white: #fff;
+$mainOrange: #f29b30;
+$mainGreen: #0d322b;
+$lightBlue: #3082f2;
+
+
+$orange: rgb(219, 165, 14);
+
+
+// Mixins
+
+@mixin titles {
+    font-size: 4.8rem;
+    padding-left: 4rem;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+@mixin mobileTitles {
+    font-size: 2.5rem;
+    line-height: 4.2rem;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    z-index: 10;
+    
+}
+
+@mixin textbgDecoration {
+    color: white;
+    font-size: 15rem;
+    text-transform: uppercase;
+    opacity: 6%;
+    letter-spacing: -0.8rem;
+    line-height: 31rem;
+}
+
+@mixin noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin hoverLink ($hoverColor, $lineHeight) {
+    text-decoration: none;
+    position: relative;
+    
+    
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0; bottom: 0;
+        height: ($lineHeight); width: 100%;
+        background-color: ($hoverColor);
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+    }
+
+    &:hover {
+        color: ($hoverColor);
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }  
+}

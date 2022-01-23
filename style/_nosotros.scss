@@ -1,0 +1,100 @@
+#nosotros {
+    padding-top: 6rem;
+    position: relative;
+
+    h2 {
+        @include titles;
+        z-index: 5;
+    }
+
+    .text-bg {
+        position: absolute;
+        top: -15%; left: 30%;
+
+        h2 {
+            @include textbgDecoration;
+            @include noSelect;
+            font-size: 12rem;
+        }
+    }
+
+    .nosotros-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'texto imagen';
+        margin: 0 6rem;
+        z-index: 15;
+    }
+
+    .nosotros-texto {
+        grid-area: texto;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+
+        p {
+            font-size: 1rem;
+            text-align: justify;
+            line-height: 2rem;
+        }
+    }
+
+    .nosotros-imagen {
+        grid-area: imagen;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        
+        img {
+            width: 80%;
+            max-width: 50rem;
+            border-radius: 66% 34% 36% 64% / 50% 37% 63% 50% ;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    #nosotros {
+
+        h2 {
+            @include mobileTitles;
+        }
+
+        .text-bg {
+            position: absolute;
+            top: -15%; left: 15%;
+    
+            h2 {
+                font-size: 10rem;
+            }
+        }
+
+        .nosotros-container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 2.5rem;
+            z-index: 15;
+
+            .nosotros-texto {
+        
+                p {
+                    margin: 1rem 0;
+                    font-size: 0.9rem;
+                    line-height: 1.8rem;
+                }
+            }
+        
+            .nosotros-imagen {
+                justify-content: center;
+                margin: 1rem 0 0 0;
+                
+                img {
+                    width: 100%;
+                    max-width: 20rem;
+                    border-radius: 66% 34% 36% 64% / 50% 37% 63% 50% ;
+                }
+            }
+        }
+    }
+}

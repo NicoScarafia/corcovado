@@ -1,0 +1,39 @@
+@media all, (max-width: 600px) and (max-width: 991px) {
+
+    #nosotros {
+
+        h2 {
+            @include mobileTitles;
+        }
+
+        .text-bg {
+            display: none;
+        }
+
+        .nosotros-container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 2.5rem;
+            z-index: 15;
+
+            .nosotros-texto {
+        
+                p {
+                    margin: 1rem 0;
+                    font-size: 0.9rem;
+                    line-height: 1.8rem;
+                }
+            }
+        
+            .nosotros-imagen {
+                justify-content: center;
+                margin: 1rem 0;
+                
+                img {
+                    width: 110%;
+                    border-radius: 66% 34% 36% 64% / 50% 37% 63% 50% ;
+                }
+            }
+        }
+    }
+}
