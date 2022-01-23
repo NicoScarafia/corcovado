@@ -138,14 +138,13 @@ header .btn__menu {
   z-index: 1;
   -webkit-text-stroke: 0.12rem black;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
 }
 
 #hero .brand p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  letter-spacing: -0.1rem;
   font-weight: 600;
-  font-family: 'Alfa Slab One', cursive;
-  -webkit-text-stroke: 0.08rem black;
+  -webkit-text-stroke: 0.06rem black;
   text-align: center;
 }
 
@@ -203,10 +202,11 @@ header .btn__menu {
     width: 14rem;
   }
   #hero .brand h1 {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0.3rem;
     padding: 1.5rem 2rem;
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     line-height: 3rem;
+    letter-spacing: 0.13rem;
   }
   #hero .brand p {
     font-size: 1.6rem;
