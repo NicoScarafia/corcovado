@@ -26,16 +26,15 @@ header {
     }
 
     .btn__menu{
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+        position: absolute;
+        top: 2rem; right: 3rem;
         cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        transition: all 300ms;
-        display: none;
+        color: $mainOrange;
+        display: none; 
+
+        i {
+            font-size: 2.2rem;
+        }
     }
 }
 
@@ -121,12 +120,44 @@ header {
     top: 0; left: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    background-color: #1cb0dd2f;
+    background-color: #1cb0dd3f;
     mix-blend-mode: overlay;
 }
 
 
 @media (max-width: 768px) {
+
+    header {
+        top: 0; right: 0;
+        padding: 0 0;
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 0; padding: 0;
+            background-color: rgba(255, 255, 255, 0.931);
+            height: 100vh;
+            width: 60vw;
+            transform-origin: right;
+            transition: transform 250ms ease-in;
+    
+            a {
+                margin: 1.5rem 0;
+                color: black;   
+            }
+        }
+
+        .transform {
+            transform: translateX(100%);
+        }
+    
+        .btn__menu {
+            display: unset;
+        }
+    }
 
     #hero {
         
@@ -153,7 +184,6 @@ header {
             a {
             font-size: 0.9rem;
             padding: 0.5rem 1.2rem; 
-            margin: 1.5rem 0;
             text-decoration: none;
             color: black;
             }
