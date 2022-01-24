@@ -13,7 +13,11 @@ header {
   text-align: center;
 }
 
-header nav ul {
+header .menu-btn {
+  display: none;
+}
+
+header .navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +27,7 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul a {
+header .navbar ul a {
   text-decoration: none;
   color: white;
   font-weight: 500;
@@ -36,7 +40,7 @@ header nav ul a {
   position: relative;
 }
 
-header nav ul a::after {
+header .navbar ul a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -54,28 +58,114 @@ header nav ul a::after {
   transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
 
-header nav ul a:hover {
+header .navbar ul a:hover {
   color: #f29b30;
 }
 
-header nav ul a:hover::after {
+header .navbar ul a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
 }
 
-header .btn__menu {
-  position: absolute;
-  top: 2rem;
-  right: 3rem;
-  cursor: pointer;
-  color: #f29b30;
+header .navbar ul .nav-close {
   display: none;
 }
 
-header .btn__menu i {
-  font-size: 2.2rem;
+@media (max-width: 768px) {
+  header {
+    top: 0;
+    right: 0;
+    padding: 0 0;
+  }
+  header .menu-btn {
+    display: unset;
+    font-size: 2.5rem;
+    margin: 2rem 2.5rem 0 0;
+    color: #f29b30;
+    cursor: pointer;
+  }
+  header .navbar {
+    background-color: rgba(255, 255, 255, 0.966);
+    position: fixed;
+    right: -110%;
+    top: 0;
+  }
+  header .navbar.active {
+    right: 0;
+  }
+  header .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 60vw;
+    height: 100vh;
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  }
+  header .navbar ul a {
+    margin: 1.5rem 0;
+    color: black;
+    font-size: 1.3rem;
+  }
+  header .navbar ul .nav-close {
+    display: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem 2.5rem 0 0;
+    font-size: 2.5rem;
+    color: #f29b30;
+    cursor: pointer;
+  }
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #1cb0dd3f;
+  mix-blend-mode: overlay;
 }
 
 #hero {
@@ -160,80 +250,7 @@ header .btn__menu i {
   border: 0.1rem solid white;
 }
 
-.video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.color-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: #1cb0dd3f;
-  mix-blend-mode: overlay;
-}
-
 @media (max-width: 768px) {
-  header {
-    top: 0;
-    right: 0;
-    padding: 0 0;
-  }
-  header nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(255, 255, 255, 0.931);
-    height: 100vh;
-    width: 60vw;
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transition: -webkit-transform 250ms ease-in;
-    transition: -webkit-transform 250ms ease-in;
-    transition: transform 250ms ease-in;
-    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-  }
-  header nav ul a {
-    margin: 1.5rem 0;
-    color: black;
-  }
-  header .transform {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  header .btn__menu {
-    display: unset;
-  }
   #hero .brand img {
     width: 14rem;
   }
@@ -775,7 +792,7 @@ header .btn__menu i {
 footer {
   margin-top: 6rem;
   margin-bottom: 0;
-  background-image: url(../assets/img/background-footer.png);
+  background-color: #166291;
   background-size: cover;
   padding-top: 2rem;
 }
@@ -860,7 +877,7 @@ footer .footer-container .footer-contacto div a:hover {
 
 .footer-nico {
   padding: 0 0 0.3rem 0;
-  background-color: #0077c0;
+  background-color: #166291;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,7 +901,7 @@ footer .footer-container .footer-contacto div a:hover {
 .footer-nico div p span {
   font-size: 1.2rem;
   letter-spacing: 0.025rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
 
@@ -917,7 +934,7 @@ footer .footer-container .footer-contacto div a:hover {
 @media (max-width: 768px) {
   footer {
     margin-top: 4rem;
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 0 1.5rem;
   }
   footer .footer-container {
@@ -963,6 +980,20 @@ footer .footer-container .footer-contacto div a:hover {
   footer .footer-container .footer-contacto div i a {
     line-height: 1rem;
   }
+}
+
+.footer-nico div p {
+  font-size: 0.8rem;
+}
+
+.footer-nico div p span {
+  font-size: 1rem;
+}
+
+.footer-nico div .social-icon a i {
+  padding: 0 0.5rem;
+  color: black;
+  font-size: 1rem;
 }
 
 * {

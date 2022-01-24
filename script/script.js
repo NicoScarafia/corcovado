@@ -1,15 +1,21 @@
-const MENU = document.querySelector('.btn__menu');
-console.log(MENU)
+let navbar = document.querySelector('.header .navbar');
 
-MENU.addEventListener('click', () => {
-    const navList = document.querySelector('.list__menu');
-    navList.classList.remove('transform');
+document.querySelector('#menu_btn').onclick = () => {
+    navbar.classList.add('active');
+}
 
-    const HERO = document.querySelector('#hero');
+document.querySelector('#nav_close').onclick = () => {
+    navbar.classList.remove('active');
+}
 
-    HERO.addEventListener('click', () => {
-        navList.classList.add('transform');
-    })
-    
-})
 
+let hero = document.querySelector('#hero');
+
+document.querySelector('#hero').onclick = () => {
+    navbar.classList.remove('active');
+}
+
+
+window.onscroll = () => {
+    navbar.classList.remove('active');
+}
