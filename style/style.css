@@ -87,7 +87,7 @@ header .navbar ul .nav-close {
   header .menu-btn {
     display: unset;
     font-size: 2.5rem;
-    margin: 2rem 2.5rem 0 0;
+    margin: 1.5rem 2rem 0 0;
     color: #f29b30;
     cursor: pointer;
   }
@@ -136,7 +136,7 @@ header .navbar ul .nav-close {
     position: absolute;
     top: 0;
     right: 0;
-    margin: 2rem 2.5rem 0 0;
+    margin: 1.5rem 2rem 0 0;
     font-size: 2.5rem;
     color: #f29b30;
     cursor: pointer;
