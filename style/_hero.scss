@@ -1,7 +1,7 @@
 // NAVBAR SECTION
 
 header {
-
+    
     position: absolute;
     top: 2rem; right: 0;
     display: flex;
@@ -15,6 +15,7 @@ header {
     }
 
     .navbar {
+        transition: .2s linear;
 
         ul {
             display: flex;
@@ -96,7 +97,6 @@ header {
         }
     }
 }
-
 
 
 // ---------------------------------------------------------------

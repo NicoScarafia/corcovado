@@ -17,6 +17,11 @@ header .menu-btn {
   display: none;
 }
 
+header .navbar {
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
 header .navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
