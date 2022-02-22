@@ -53,7 +53,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
     #nosotros {
 
@@ -86,12 +86,14 @@
             }
         
             .nosotros-imagen {
+                display: flex;
                 justify-content: center;
-                margin: 1rem 0 0 0;
+                text-align: center;
+                margin: 1rem auto;
                 
                 img {
-                    width: 100%;
-                    max-width: 20rem;
+                    width: 90%;
+                    max-width: 25rem;
                     border-radius: 66% 34% 36% 64% / 50% 37% 63% 50% ;
                 }
             }

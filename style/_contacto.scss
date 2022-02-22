@@ -18,28 +18,28 @@
 
     .contacto-container {
         display: flex;
-        align-items: center;
-        margin: 3rem 8rem;
+        justify-content: center;
+        margin: 3rem 0;
 
         .form-container, .lista-contacto {
             max-width: 50%;
         }
 
-            
         .form-container {
-            margin:0 auto;
+            margin:0 2rem;
 
-        .form {
+            .form {
             width:21rem;    height: auto;
             background:#e6e6e6;
             border-radius:1rem;
             box-shadow:0 0 3rem -2rem black;
-            margin:0 auto;
+            margin:0 0;
             padding:2.5rem 2rem;
             position:relative;
 
             h4 {
                 font-size: 1.5rem;
+                line-height: 1.5rem;
                 width:12rem;
                 color:$orange;
                 border-bottom:0.15rem solid $orange;
@@ -107,7 +107,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin: 1rem 3rem;
+        margin: 1rem 2rem;
         padding: 2rem 0;
         
 
@@ -169,6 +169,7 @@
             margin: 3rem 1rem;
 
             .form-container, .lista-contacto {
+                margin: 1rem auto;
                 max-width: 100%;
             }
         }
@@ -193,10 +194,10 @@
         }
 
         .map-container {
-            margin-top: 1rem;
+            margin-top: 4rem;
 
             iframe {
-                width: 100%;
+                width: 36rem;
             }
         }
     }

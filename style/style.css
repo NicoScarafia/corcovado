@@ -304,9 +304,9 @@ header .navbar ul .nav-close {
   text-transform: uppercase;
   opacity: 6%;
   /* Standard */
-  -moz-opacity: 0.5;
+  -moz-opacity: 6%;
   /* Firefox */
-  -webkit-opacity: 0.5;
+  -webkit-opacity: 6%;
   /* Safari */
   filter: alpha(opacity=50);
   /* Internet Explorer */
@@ -378,7 +378,7 @@ header .navbar ul .nav-close {
   border-radius: 66% 34% 36% 64% / 50% 37% 63% 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   #nosotros h2 {
     font-size: 2.5rem;
     line-height: 4.2rem;
@@ -411,14 +411,18 @@ header .navbar ul .nav-close {
     line-height: 1.8rem;
   }
   #nosotros .nosotros-container .nosotros-imagen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 1rem 0 0 0;
+    text-align: center;
+    margin: 1rem auto;
   }
   #nosotros .nosotros-container .nosotros-imagen img {
-    width: 100%;
-    max-width: 20rem;
+    width: 90%;
+    max-width: 25rem;
     border-radius: 66% 34% 36% 64% / 50% 37% 63% 50%;
   }
 }
@@ -446,9 +450,9 @@ header .navbar ul .nav-close {
   text-transform: uppercase;
   opacity: 6%;
   /* Standard */
-  -moz-opacity: 0.5;
+  -moz-opacity: 6%;
   /* Firefox */
-  -webkit-opacity: 0.5;
+  -webkit-opacity: 6%;
   /* Safari */
   filter: alpha(opacity=50);
   /* Internet Explorer */
@@ -570,9 +574,9 @@ header .navbar ul .nav-close {
   text-transform: uppercase;
   opacity: 6%;
   /* Standard */
-  -moz-opacity: 0.5;
+  -moz-opacity: 6%;
   /* Firefox */
-  -webkit-opacity: 0.5;
+  -webkit-opacity: 6%;
   /* Safari */
   filter: alpha(opacity=50);
   /* Internet Explorer */
@@ -595,10 +599,10 @@ header .navbar ul .nav-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 3rem 8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 0;
 }
 
 #contacto .contacto-container .form-container, #contacto .contacto-container .lista-contacto {
@@ -606,7 +610,7 @@ header .navbar ul .nav-close {
 }
 
 #contacto .contacto-container .form-container {
-  margin: 0 auto;
+  margin: 0 2rem;
 }
 
 #contacto .contacto-container .form-container .form {
@@ -616,13 +620,14 @@ header .navbar ul .nav-close {
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 3rem -2rem black;
           box-shadow: 0 0 3rem -2rem black;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 2.5rem 2rem;
   position: relative;
 }
 
 #contacto .contacto-container .form-container .form h4 {
   font-size: 1.5rem;
+  line-height: 1.5rem;
   width: 12rem;
   color: #dba50e;
   border-bottom: 0.15rem solid #dba50e;
@@ -696,7 +701,7 @@ header .navbar ul .nav-close {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin: 1rem 3rem;
+  margin: 1rem 2rem;
   padding: 2rem 0;
 }
 
@@ -796,6 +801,7 @@ header .navbar ul .nav-close {
     margin: 3rem 1rem;
   }
   #contacto .contacto-container .form-container, #contacto .contacto-container .lista-contacto {
+    margin: 1rem auto;
     max-width: 100%;
   }
   #contacto .lista-contacto {
@@ -814,19 +820,17 @@ header .navbar ul .nav-close {
     font-size: 1.1rem;
   }
   #contacto .map-container {
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
   #contacto .map-container iframe {
-    width: 100%;
+    width: 36rem;
   }
 }
 
 footer {
-  margin-top: 4rem;
   margin-bottom: 0;
-  background-color: #166291;
+  background-color: #dba50e;
   background-size: cover;
-  padding-top: 2rem;
 }
 
 footer .footer-container {
@@ -846,7 +850,7 @@ footer .footer-container .derechos {
 
 .footer-nico {
   padding: 0 0 0.3rem 0;
-  background-color: #166291;
+  background-color: #dba50e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,8 +872,7 @@ footer .footer-container .derechos {
 }
 
 .footer-nico div p span {
-  font-size: 1.2rem;
-  letter-spacing: 0.025rem;
+  font-size: 1.3rem;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
@@ -947,8 +950,8 @@ footer .footer-container .derechos {
 
 body {
   background: #b88e18;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(21%, #b88e18), color-stop(68%, #39601a));
-  background: linear-gradient(180deg, #b88e18 21%, #39601a 68%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(21%, #b88e18), color-stop(75%, #426e1e));
+  background: linear-gradient(180deg, #b88e18 21%, #426e1e 75%);
 }
 
 section {
