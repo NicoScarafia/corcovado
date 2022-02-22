@@ -1,9 +1,3 @@
-// Bootrsrap Breakpoints
-
-$mobile: (max-width: 576px);
-$tablet: (min-width: 577px) and (max-width: 992px);
-
-
 // Colors
 $black: #000;
 $white: #fff;
@@ -39,10 +33,11 @@ $orange: rgb(219, 165, 14);
     text-transform: uppercase;
     opacity: 6%; /* Standard */
     -moz-opacity: 6%; /* Firefox */
-    -webkit-opacity: 6%; /* Safari */
+    -webkit-opacity: 1%; /* Safari */
     filter: alpha(opacity=50); /* Internet Explorer */
     letter-spacing: -0.8rem;
     line-height: 31rem;
+    visibility: visible;
 }
 
 @mixin noSelect {

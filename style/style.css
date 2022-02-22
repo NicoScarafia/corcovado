@@ -306,12 +306,13 @@ header .navbar ul .nav-close {
   /* Standard */
   -moz-opacity: 6%;
   /* Firefox */
-  -webkit-opacity: 6%;
+  -webkit-opacity: 1%;
   /* Safari */
   filter: alpha(opacity=50);
   /* Internet Explorer */
   letter-spacing: -0.8rem;
   line-height: 31rem;
+  visibility: visible;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -440,7 +441,7 @@ header .navbar ul .nav-close {
 
 #excursiones .text-bg {
   position: absolute;
-  top: -10%;
+  top: -9%;
   left: 10%;
 }
 
@@ -452,12 +453,13 @@ header .navbar ul .nav-close {
   /* Standard */
   -moz-opacity: 6%;
   /* Firefox */
-  -webkit-opacity: 6%;
+  -webkit-opacity: 1%;
   /* Safari */
   filter: alpha(opacity=50);
   /* Internet Explorer */
   letter-spacing: -0.8rem;
   line-height: 31rem;
+  visibility: visible;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -550,6 +552,241 @@ header .navbar ul .nav-close {
   }
 }
 
+#foto-grid {
+  margin: -2.5rem 0 0 0;
+}
+
+#foto-grid h2 {
+  font-size: 4.8rem;
+  padding-left: 4rem;
+  text-transform: uppercase;
+  z-index: 10;
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+}
+
+#foto-grid .grid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#foto-grid .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+  margin: 0 2rem;
+}
+
+#foto-grid .images div {
+  margin: 0.5rem 1rem;
+  width: 15rem;
+  height: auto;
+}
+
+#foto-grid .images div img {
+  width: 100%;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  cursor: pointer;
+}
+
+#foto-grid .images div img:hover {
+  -webkit-transform: scale(98.5%);
+          transform: scale(98.5%);
+}
+
+#foto-grid .modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.931);
+  color: white;
+  z-index: 10;
+  overflow: auto;
+}
+
+#foto-grid .modal .modalContent {
+  min-height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#foto-grid .modal .modalContent .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#foto-grid .modal .modalContent .center i {
+  margin: 0 2.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: none;
+}
+
+#foto-grid .modal .modalContent div {
+  height: 80%;
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#foto-grid .modal .modalContent div .modalImg {
+  height: 28rem;
+  -webkit-animation: pop 0.4s linear;
+          animation: pop 0.4s linear;
+}
+
+#foto-grid .modal .modalContent div .modalText {
+  -webkit-animation: pop 0.4s linear;
+          animation: pop 0.4s linear;
+}
+
+#foto-grid .modal .close {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  cursor: pointer;
+}
+
+#foto-grid .modal .close i {
+  font-size: 1.5rem;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+#foto-grid .modal .close i:hover {
+  color: #f29b30;
+}
+
+.hidden {
+  display: none;
+}
+
+@-webkit-keyframes pop {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  #foto-grid {
+    margin: 0 2rem;
+  }
+  #foto-grid h2 {
+    font-size: 2.5rem;
+    line-height: 4.2rem;
+    padding-left: 2rem;
+    text-transform: uppercase;
+    z-index: 10;
+    padding-left: 0;
+  }
+  #foto-grid .images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: auto;
+    margin: 0 0.5rem;
+  }
+  #foto-grid .images div {
+    margin: 0.5rem 1rem;
+    width: 12rem;
+    height: auto;
+  }
+  #foto-grid .images div img {
+    width: 100%;
+    -webkit-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+    cursor: pointer;
+  }
+  #foto-grid .images div img:hover {
+    -webkit-transform: scale(98.5%);
+            transform: scale(98.5%);
+  }
+  #foto-grid .modal .modalContent {
+    width: 100%;
+    padding: 6rem 0;
+    margin: 0 auto;
+  }
+  #foto-grid .modal .modalContent i {
+    display: none;
+  }
+  #foto-grid .modal .close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+  #foto-grid .modal .close i {
+    font-size: 1.5rem;
+    -webkit-transition: .3s all;
+    transition: .3s all;
+  }
+  #foto-grid .modal .close i:hover {
+    color: #f29b30;
+  }
+}
+
 #contacto {
   position: relative;
   margin: 0 auto;
@@ -576,12 +813,13 @@ header .navbar ul .nav-close {
   /* Standard */
   -moz-opacity: 6%;
   /* Firefox */
-  -webkit-opacity: 6%;
+  -webkit-opacity: 1%;
   /* Safari */
   filter: alpha(opacity=50);
   /* Internet Explorer */
   letter-spacing: -0.8rem;
   line-height: 31rem;
+  visibility: visible;
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -616,7 +854,7 @@ header .navbar ul .nav-close {
 #contacto .contacto-container .form-container .form {
   width: 21rem;
   height: auto;
-  background: #e6e6e6;
+  background: #d8d8d8;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0 3rem -2rem black;
           box-shadow: 0 0 3rem -2rem black;
