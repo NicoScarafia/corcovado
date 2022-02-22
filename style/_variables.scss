@@ -37,7 +37,10 @@ $orange: rgb(219, 165, 14);
     color: white;
     font-size: 15rem;
     text-transform: uppercase;
-    opacity: 6%;
+    opacity: 6%; /* Standard */
+    -moz-opacity: 0.5; /* Firefox */
+    -webkit-opacity: 0.5; /* Safari */
+    filter: alpha(opacity=50); /* Internet Explorer */
     letter-spacing: -0.8rem;
     line-height: 31rem;
 }
@@ -47,8 +50,8 @@ $orange: rgb(219, 165, 14);
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
     -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    -ms-user-select: none; /* Internet Explorer / Edge */
+    user-select: none; /* Chrome, Edge, Opera, Firefox */
 }
 
 @mixin hoverLink ($hoverColor, $lineHeight) {

@@ -1,5 +1,6 @@
 #contacto {
     position: relative;
+    margin: 0 auto;
 
     h2 {
         @include titles;
@@ -24,69 +25,94 @@
             max-width: 50%;
         }
 
+            
         .form-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0 auto;
-            text-align: center;
+            margin:0 auto;
 
-            form {
-               max-width: 29rem;
-               background: rgb(210,210,210);
-               background: linear-gradient(180deg, rgba(210,210,210,0.22656395321800593) 38%, rgba(255,255,255,0.12012137618719365) 100%);
-               border-radius: 0.5rem;
-               z-index: 2;
+        .form {
+            width:21rem;    height: auto;
+            background:#e6e6e6;
+            border-radius:1rem;
+            box-shadow:0 0 3rem -2rem black;
+            margin:0 auto;
+            padding:2.5rem 2rem;
+            position:relative;
 
-               h4 {
-                padding: 1rem 0;
-                font-size: 1.2rem;
-               }
-
-               fieldset {
-                   padding: 0.8rem 0;
-                   margin: 0.6rem 0;
-
-                   textarea {
-                       min-width: 20rem;
-                       max-width: 20rem;
-                       min-height: 15rem;
-                       max-height: 15rem;
-                   }
-               }
-
-               fieldset input, fieldset textarea {
-                padding: 0.2rem 0;
-
-                &::placeholder {
-                    font-size: 0.85rem;
-                    text-align: center;   
-                }
-               }
-
-               #btn {
-                   padding: 0.8rem 0;
-                   margin-top: 0;
-
-                   input {
-                       padding: 0.3rem;
-                       cursor: pointer;
-                       
-                   }
-               }
+            h4 {
+                font-size: 1.5rem;
+                width:12rem;
+                color:$orange;
+                border-bottom:0.15rem solid $orange;
+                padding-bottom:0.8rem;
             }
         }
-    }
+
+       
+
+        input{
+            width:100%;
+            padding:0.3rem;
+            background:none;    outline:none;    resize:none;
+            border:0;
+            transition:all .3s;
+            border-bottom:0.15rem solid #bebed2;
+
+            &:focus {
+                border-bottom:0.15rem solid #78788c;
+            }
+        }
+
+        p:before{
+            content: attr(type);
+            display:block;
+            margin:28px 0 0;
+            font-size:14px;
+            color:#5a5a5a
+        }
+
+        button{
+            float:right;
+            padding:0.5rem 1rem;
+            margin:1.5rem 0;
+            border: 0.1rem solid #78788c;
+            background:0;
+            color:#5a5a6e;
+            cursor:pointer;
+            transition: all .3s;
+
+            &:hover {
+                background:#616169;
+                border: 0.1rem solid #616169;
+                color:#fff
+            }  
+        }
+
+        div{
+            background:#616169;
+            color:#fff;
+            width:320px;
+            padding:1rem 0.4rem 1rem 0;
+            border-radius:0.3rem;
+            font-size:0.85rem;
+            
+            i {
+                margin: 0 0.5rem;
+            }
+        }
+    }   
+}
 
     .lista-contacto {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        margin: 2rem auto;
+        margin: 1rem 3rem;
+        padding: 2rem 0;
+        
 
         div {
-            padding: 1rem 0;
+            padding: 0.5rem 0;
             text-align: right; 
 
             i {
@@ -100,7 +126,7 @@
                 text-decoration: none;
                 color: $orange;
                 font-weight: 600;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 transition: all 0.5s;
                 
                 @include hoverLink(white, 0.1rem)
@@ -114,7 +140,7 @@
         margin-top: 4rem;
 
         iframe {
-            width: 60%;
+            width: 100%;
         }
     }
 }

@@ -303,6 +303,13 @@ header .navbar ul .nav-close {
   font-size: 15rem;
   text-transform: uppercase;
   opacity: 6%;
+  /* Standard */
+  -moz-opacity: 0.5;
+  /* Firefox */
+  -webkit-opacity: 0.5;
+  /* Safari */
+  filter: alpha(opacity=50);
+  /* Internet Explorer */
   letter-spacing: -0.8rem;
   line-height: 31rem;
   -webkit-touch-callout: none;
@@ -313,9 +320,9 @@ header .navbar ul .nav-close {
   -moz-user-select: none;
   /* Old versions of Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
+  /* Internet Explorer / Edge */
   user-select: none;
-  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  /* Chrome, Edge, Opera, Firefox */
   font-size: 12rem;
 }
 
@@ -438,6 +445,13 @@ header .navbar ul .nav-close {
   font-size: 15rem;
   text-transform: uppercase;
   opacity: 6%;
+  /* Standard */
+  -moz-opacity: 0.5;
+  /* Firefox */
+  -webkit-opacity: 0.5;
+  /* Safari */
+  filter: alpha(opacity=50);
+  /* Internet Explorer */
   letter-spacing: -0.8rem;
   line-height: 31rem;
   -webkit-touch-callout: none;
@@ -448,9 +462,9 @@ header .navbar ul .nav-close {
   -moz-user-select: none;
   /* Old versions of Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
+  /* Internet Explorer / Edge */
   user-select: none;
-  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  /* Chrome, Edge, Opera, Firefox */
 }
 
 #excursiones .container {
@@ -489,7 +503,7 @@ header .navbar ul .nav-close {
 #excursiones .container .card h5 {
   font-size: 1.1rem;
   line-height: 1.3rem;
-  padding: 0.4rem 0;
+  padding: 0.56rem 0;
 }
 
 #excursiones .container .card p {
@@ -534,6 +548,7 @@ header .navbar ul .nav-close {
 
 #contacto {
   position: relative;
+  margin: 0 auto;
 }
 
 #contacto h2 {
@@ -554,6 +569,13 @@ header .navbar ul .nav-close {
   font-size: 15rem;
   text-transform: uppercase;
   opacity: 6%;
+  /* Standard */
+  -moz-opacity: 0.5;
+  /* Firefox */
+  -webkit-opacity: 0.5;
+  /* Safari */
+  filter: alpha(opacity=50);
+  /* Internet Explorer */
   letter-spacing: -0.8rem;
   line-height: 31rem;
   -webkit-touch-callout: none;
@@ -564,9 +586,9 @@ header .navbar ul .nav-close {
   -moz-user-select: none;
   /* Old versions of Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
+  /* Internet Explorer / Edge */
   user-select: none;
-  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  /* Chrome, Edge, Opera, Firefox */
 }
 
 #contacto .contacto-container {
@@ -584,78 +606,82 @@ header .navbar ul .nav-close {
 }
 
 #contacto .contacto-container .form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 0 auto;
-  text-align: center;
 }
 
-#contacto .contacto-container .form-container form {
-  max-width: 29rem;
-  background: #d2d2d2;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(38%, rgba(210, 210, 210, 0.226564)), to(rgba(255, 255, 255, 0.120121)));
-  background: linear-gradient(180deg, rgba(210, 210, 210, 0.226564) 38%, rgba(255, 255, 255, 0.120121) 100%);
-  border-radius: 0.5rem;
-  z-index: 2;
+#contacto .contacto-container .form-container .form {
+  width: 21rem;
+  height: auto;
+  background: #e6e6e6;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 3rem -2rem black;
+          box-shadow: 0 0 3rem -2rem black;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  position: relative;
 }
 
-#contacto .contacto-container .form-container form h4 {
-  padding: 1rem 0;
-  font-size: 1.2rem;
+#contacto .contacto-container .form-container .form h4 {
+  font-size: 1.5rem;
+  width: 12rem;
+  color: #dba50e;
+  border-bottom: 0.15rem solid #dba50e;
+  padding-bottom: 0.8rem;
 }
 
-#contacto .contacto-container .form-container form fieldset {
-  padding: 0.8rem 0;
-  margin: 0.6rem 0;
-}
-
-#contacto .contacto-container .form-container form fieldset textarea {
-  min-width: 20rem;
-  max-width: 20rem;
-  min-height: 15rem;
-  max-height: 15rem;
-}
-
-#contacto .contacto-container .form-container form fieldset input, #contacto .contacto-container .form-container form fieldset textarea {
-  padding: 0.2rem 0;
-}
-
-#contacto .contacto-container .form-container form fieldset input::-webkit-input-placeholder, #contacto .contacto-container .form-container form fieldset textarea::-webkit-input-placeholder {
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-#contacto .contacto-container .form-container form fieldset input:-ms-input-placeholder, #contacto .contacto-container .form-container form fieldset textarea:-ms-input-placeholder {
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-#contacto .contacto-container .form-container form fieldset input::-ms-input-placeholder, #contacto .contacto-container .form-container form fieldset textarea::-ms-input-placeholder {
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-#contacto .contacto-container .form-container form fieldset input::placeholder, #contacto .contacto-container .form-container form fieldset textarea::placeholder {
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-#contacto .contacto-container .form-container form #btn {
-  padding: 0.8rem 0;
-  margin-top: 0;
-}
-
-#contacto .contacto-container .form-container form #btn input {
+#contacto .contacto-container .form-container input {
+  width: 100%;
   padding: 0.3rem;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-bottom: 0.15rem solid #bebed2;
+}
+
+#contacto .contacto-container .form-container input:focus {
+  border-bottom: 0.15rem solid #78788c;
+}
+
+#contacto .contacto-container .form-container p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+#contacto .contacto-container .form-container button {
+  float: right;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  border: 0.1rem solid #78788c;
+  background: 0;
+  color: #5a5a6e;
   cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+#contacto .contacto-container .form-container button:hover {
+  background: #616169;
+  border: 0.1rem solid #616169;
+  color: #fff;
+}
+
+#contacto .contacto-container .form-container div {
+  background: #616169;
+  color: #fff;
+  width: 320px;
+  padding: 1rem 0.4rem 1rem 0;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+}
+
+#contacto .contacto-container .form-container div i {
+  margin: 0 0.5rem;
 }
 
 #contacto .lista-contacto {
@@ -670,11 +696,12 @@ header .navbar ul .nav-close {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin: 2rem auto;
+  margin: 1rem 3rem;
+  padding: 2rem 0;
 }
 
 #contacto .lista-contacto div {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: right;
 }
 
@@ -689,7 +716,7 @@ header .navbar ul .nav-close {
   text-decoration: none;
   color: #dba50e;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   text-decoration: none;
@@ -736,7 +763,7 @@ header .navbar ul .nav-close {
 }
 
 #contacto .map-container iframe {
-  width: 60%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -795,7 +822,7 @@ header .navbar ul .nav-close {
 }
 
 footer {
-  margin-top: 6rem;
+  margin-top: 4rem;
   margin-bottom: 0;
   background-color: #166291;
   background-size: cover;
@@ -803,81 +830,18 @@ footer {
 }
 
 footer .footer-container {
-  padding: 5rem 0;
+  padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .footer-container div {
-  min-width: 25rem;
-  max-width: 25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .footer-container .derechos {
   padding-left: 3rem;
   font-weight: 500;
-}
-
-footer .footer-container .footer-nav ul {
-  list-style: none;
-}
-
-footer .footer-container .footer-nav ul a {
-  text-align: center;
-  text-decoration: none;
-}
-
-footer .footer-container .footer-nav ul a li {
-  padding: 0.2rem 0;
-  text-decoration: none;
-  font-weight: 500;
-  color: black;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-footer .footer-container .footer-nav ul a li:hover {
-  -webkit-transform: scaleX(110%);
-          transform: scaleX(110%);
-  color: white;
-}
-
-footer .footer-container .footer-contacto {
-  text-align: right;
-}
-
-footer .footer-container .footer-contacto div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  padding: 0.3rem 0;
-  padding-right: 3rem;
-}
-
-footer .footer-container .footer-contacto div i {
-  padding: 0 0.3rem;
-}
-
-footer .footer-container .footer-contacto div a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-footer .footer-container .footer-contacto div a:hover {
-  color: white;
 }
 
 .footer-nico {
@@ -948,42 +912,12 @@ footer .footer-container .footer-contacto div a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  footer .footer-container div {
-    min-width: 20rem;
-    max-width: 100%;
-  }
   footer .footer-container .derechos {
     padding-left: 0rem;
     text-align: center;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-  }
-  footer .footer-container .footer-nav {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    padding-top: 2rem;
-  }
-  footer .footer-container .footer-nav ul a li {
-    padding: 0.2rem 0;
-  }
-  footer .footer-container .footer-contacto {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    text-align: center;
-    margin: 3rem 1rem;
-  }
-  footer .footer-container .footer-contacto div {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0.3rem 1rem;
-    padding-right: 0;
-  }
-  footer .footer-container .footer-contacto div i a {
-    line-height: 1rem;
   }
 }
 
