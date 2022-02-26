@@ -18,10 +18,18 @@
         }
     }
 
+    .nosotros-maxcontainer {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    align-items: center;
+    }
+
     .nosotros-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'texto imagen';
+        gap: 1rem;
         margin: 0 6rem;
         z-index: 15;
     }
