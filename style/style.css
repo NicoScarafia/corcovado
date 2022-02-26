@@ -350,6 +350,9 @@ header .navbar ul .nav-close {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: 'texto imagen';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   margin: 0 6rem;
   z-index: 15;

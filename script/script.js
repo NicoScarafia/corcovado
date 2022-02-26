@@ -74,3 +74,51 @@ images.forEach((image, index) => {
         });
     });
 });
+
+
+// ANIMATIONS W/ GSAP
+
+gsap.from('.navbar', { opacity: 0, duration: 1, y:-60,  ease: "power2.out"}) 
+gsap.from('.nosotros-button', { opacity: 0, duration: 0.3, ease: "power1.out", delay: 1.8})
+
+
+// scroll trigger
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from('.nosotros-texto', {
+    scrollTrigger: {
+        trigger: '.nosotros-container',
+    },
+    opacity: 0,
+    ease: "power2.out",
+    duration: 0.5,
+})
+
+gsap.from('.nosotros-imagen', {
+    scrollTrigger: {
+        trigger: '.nosotros-container',
+    },
+    opacity: 0,
+    ease: "power2.out",
+    duration: 1,
+    delay: 1.5,
+})
+
+gsap.from('.card', {
+    scrollTrigger: {
+        trigger: '.card',
+    },
+    opacity: 0,
+    ease: "power2.out",
+    duration: 0.3,
+})
+
+gsap.from('.images', {
+    scrollTrigger: {
+        trigger: '.images',
+    },
+    opacity: 0,
+    ease: "power2.out",
+    duration: 2.5
+})
+

@@ -29,6 +29,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 'texto imagen';
+        align-items: center;
         gap: 1rem;
         margin: 0 6rem;
         z-index: 15;
