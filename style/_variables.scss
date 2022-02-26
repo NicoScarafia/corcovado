@@ -31,9 +31,9 @@ $orange: rgb(219, 165, 14);
     color: white;
     font-size: 15rem;
     text-transform: uppercase;
-    opacity: 6%; /* Standard */
-    -moz-opacity: 6%; /* Firefox */
-    -webkit-opacity: 1%; /* Safari */
+    opacity: 0.075; /* Standard */
+    -moz-opacity: 0.075; /* Firefox */
+    -webkit-opacity: 0.075; /* Safari */
     filter: alpha(opacity=50); /* Internet Explorer */
     letter-spacing: -0.8rem;
     line-height: 31rem;
